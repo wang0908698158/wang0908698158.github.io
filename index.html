@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商業網站</title>
+</head>
+<style>
+  html,body {
+    height: 100%;
+  }
+
+  header {
+    height: 20%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background-color: blue;
+  }
+ 
+  .left-menu {
+    width: 10%;
+    height: 60%;
+    background-color: black;
+    box-sizing: border-box;
+    float: left;
+  }
+
+  nav a {
+    display: block;
+    padding: 15px;
+    color: white;
+  }
+  
+  .link a:hover {/*滑鼠在連結上時*/
+    color: red;/* 當滑鼠經過時，超連結文字顏色變色 */
+  }
+
+  .right-part {
+    width: 90%;
+    float: right;
+  }
+
+  footer {
+    background-color:yellow;
+    clear: both;
+    height: 15%;
+  }
+
+</style>
+<body>
+  <header>
+    <br>
+    <p>公司圖片</p>
+  </header>
+
+  <div class="left-menu">
+    <nav class="link">
+      <a href="firstPage.html">首頁</a>
+      <a href="#">關於我們</a>
+      <a href="sale.html">商品一覽</a>
+      <a href="joinUs.html">註冊會員</a>
+      <a href="#">聯絡我們</a>
+    </nav>
+  </div>
+
+  <div class="right-part">
+    <p>this is right part</p>
+  </div>
+
+  <footer style="color: white;">
+    <p<br>
+      電話<br>
+      地址
+    </p>
+  </footer>
+
+</body>
+</html>
