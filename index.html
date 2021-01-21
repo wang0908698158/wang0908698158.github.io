@@ -44,13 +44,42 @@
     float: right;
   }
 
+  .table {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 50%
+  }
+
+  .topline {
+    color: tomato;
+  }
+
+  .lowline {
+    color: green;
+  }
+  
+  #buttonp {
+    position: absolute;
+    top: 55%;
+    left: 20%;
+  }
+
   footer {
-    background-color:yellow;
     clear: both;
-    height: 15%;
+    height: 20%;
+    background-color: orangered;
+    opacity: 0.7;
   }
 
 </style>
+
+<script>
+  function showalert() {
+    alert("沒有下一頁");
+  }
+</script>
+
 <body>
   <header>
     <p style="color: red;">以台南火車站當範例，強制設定圖片高度寬度，<br>此處可放公司名字或圖片，圖片需特地製作大小</p>
@@ -67,13 +96,57 @@
   </div>
 
   <div class="right-part">
-   
+
+    <table class="table" border="1">
+      <caption>最新消息</caption>
+      
+      <tr class="topline">
+        <th>標題</th>
+        <th>內容</th>
+        <th>時間</th>
+      </tr>
+      <tr class="lowline">
+        <td>這裡是標題</td>
+        <td>這裡是內容</td>
+        <td>這裡是時間</td>
+      </tr>
+      <tr class="lowline">
+        <td>這裡是標題</td>
+        <td>這裡是內容</td>
+        <td>這裡是時間</td>
+      </tr>
+      <tr class="lowline">
+        <td>這裡是標題</td>
+        <td>這裡是內容</td>
+        <td>這裡是時間</td>
+      </tr>
+      <tr class="lowline">
+        <td>這裡是標題</td>
+        <td>這裡是內容</td>
+        <td>這裡是時間</td>
+      </tr>
+      <tr class="lowline">
+        <td>這裡是標題</td>
+        <td>這裡是內容</td>
+        <td>這裡是時間</td>
+      </tr>
+      <tr class="lowline">
+        <td>這裡是標題</td>
+        <td>這裡是內容</td>
+        <td>這裡是時間</td>
+      </tr>
+      <input type="button" id="buttonp" onclick="showalert()" value="下一頁"/>
+    </table>
+    
   </div>
 
-  <footer style="color: white;">
-    <p<br>
+  <footer>
+    <p>
+      <br>
       電話<br>
-      地址
+      信箱<br>
+      地址<br>
+      營業時間
     </p>
   </footer>
 

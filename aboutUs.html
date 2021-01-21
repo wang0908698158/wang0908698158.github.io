@@ -44,10 +44,16 @@
     float: right;
   }
 
+  .table {
+    width: 50%;
+    text-align: center;
+  }
+
   footer {
-    background-color:yellow;
     clear: both;
-    height: 15%;
+    height: 20%;
+    background-color: orangered;
+    opacity: 0.7;
   }
 
 </style>
@@ -67,13 +73,31 @@
   </div>
 
   <div class="right-part">
-  
+    <table class="table" border="1">
+      <colgroup span="1" style="background-color: grey;"></colgroup>
+      <colgroup span="1" style="background-color: greenyellow;"></colgroup>
+      <colgroup span="1" style="background-color: yellow;"></colgroup>
+
+      <tr>
+        <th>初期</th>
+        <th>現在</th>
+        <th>展望未來</th>
+      </tr>
+      <tr style="height: 420px;">
+        <td>內容</td>
+        <td>內容</td>
+        <td>內容</td>
+      </tr>
+    </table>
   </div>
 
-  <footer style="color: white;">
-    <p<br>
+  <footer>
+    <p>
+      <br>
       電話<br>
-      地址
+      信箱<br>
+      地址<br>
+      營業時間
     </p>
   </footer>
 
