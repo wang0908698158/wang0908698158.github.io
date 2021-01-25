@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>json</title>
+
+	<style>
+		table {
+			table-layout: fixed;
+			word-break: keep-all;
+			text-align: center;
+			width: 600px;
+		}
+		table tr {
+			height: 60px;
+		}
+		.rwid {
+			width: 500px;
+		}
+		.lwid {
+			width: 100px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<h2>Use the XMLHttpRequest to get the content of a file.</h2>
+<p>Te content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+
+<form>
+	請輸入ID: <input type="text" id="searchID">
+</form>
+<button type="button" onclick="idtest()">搜尋</button>
+
+<script>
+var x = "";
+var num;
+
+function idtest() {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+  	if (this.readyState == 4 && this.status == 200) {
+			var myObj = JSON.parse(this.responseText);
+			x = document.getElementById("searchID").value;
+    	for (i = 0; i < 100; i++) {
+      	if (myObj[i].id == x) {
+          num = i;
+      }
+    }
+    document.getElementById("last-name").innerHTML = myObj[num].first_name;
+		document.getElementById("first-name").innerHTML = myObj[num].last_name;
+		document.getElementById("email").innerHTML = myObj[num].email;
+		document.getElementById("gender").innerHTML = myObj[num].gender;
+		document.getElementById("ip_address").innerHTML = myObj[num].ip_address;
+		document.getElementById("login_at").innerHTML = myObj[num].login_at;
+		document.getElementById("description").innerHTML = myObj[num].description;
+  	}
+	};
+	xmlhttp.open("GET", "https://run.mocky.io/v3/9d5f33ec-0d2f-4743-aac9-5aef32f7badf", true);
+	xmlhttp.send();
+}
+
+</script>
+
+<table border="1">
+	<tr>
+		<td class="lwid">姓氏</td>
+		<td class="rwid" id="last-name"></td>
+	</tr>
+	<tr>
+		<td class="lwid">名字</td>
+		<td id="first-name"></td>
+	</tr>
+	<tr>
+		<td class="lwid">信箱</td>
+		<td id="email"></td>
+	</tr>
+	<tr>
+		<td class="lwid">性別</td>
+		<td id="gender"></td>
+	</tr>
+	<tr>
+		<td class="lwid">ip地址</td>
+		<td id="ip_address"></td>
+	</tr>
+	<tr>
+		<td class="lwid">登入時間</td>
+		<td id="login_at"></td>
+	</tr>
+	<tr>
+		<td class="lwid">內容</td>
+		<td id="description"></td>
+	</tr>
+</table>
+
+</body>
+</html>
